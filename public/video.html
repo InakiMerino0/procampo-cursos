@@ -1,0 +1,279 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f2f2f2] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-[#141414]">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <h2 class="text-[#141414] text-lg font-bold leading-tight tracking-[-0.015em]">EduLearn</h2>
+            </div>
+            <div class="flex items-center gap-9">
+              <a class="text-[#141414] text-sm font-medium leading-normal" href="#">My learning</a>
+              <a class="text-[#141414] text-sm font-medium leading-normal" href="#">Features</a>
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                <div
+                  class="text-[#757575] flex border-none bg-[#f2f2f2] items-center justify-center pl-4 rounded-l-xl border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#141414] focus:outline-0 focus:ring-0 border-none bg-[#f2f2f2] focus:border-none h-full placeholder:text-[#757575] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f2f2f2] text-[#141414] text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Instructor</span>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdoNxQDQV8FASn3F4_wYgeUq6obgaRGPrPloZYFnDaKUYS2XSQobpwhy2jBU95dE1Ol7r163fdPkK8s3cOtaiwvC4Mb71IBjdvsb2iBjlHlptCpnbA51MK8XOfR_DUgMi34K5iPcULiSBX26vgfs8VOwPGy_c8LHTEniukDd5hKbXWi3XmcjOyr7GVlyl-4M83Ih2pqkpVsQCH6rXAFuthbIeHfT3Am5-FUz6aM4LS7lpbIPJYJfnM6-6kAigf4ceuvbV-cEXBAXU");'
+            ></div>
+          </div>
+        </header>
+        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[920px] flex-1">
+            <div
+              class="relative flex items-center justify-center bg-[#141414] bg-cover bg-center aspect-video"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAReXHMIce8pCLe-nu0QMFbeblnqbpwk0bThABObQGvFb9lXXZndM9FYGqC7-2AyPo4wDmDBDK2KI4zMgAKXOUW9YlN4weDGeFHhIp3SuBK9xbOjZ4IXFpnj8FsMVAvb7FWihIKOYP79imzy3_exWYzxcsGQuXrEc0lB-lwUK_ZSxHS2MpPLqsXJXGGbhj_LWaOFqj1Ik78ZO1vESrllsxV59RECxmBUoxt_Em1F2uWSizrrDTOS9ARRYrXqJ2JaxOdJc5kYzY_7WI");'
+            >
+              <button class="flex shrink-0 items-center justify-center rounded-full size-16 bg-black/40 text-white">
+                <div class="text-inherit" data-icon="Play" data-size="24px" data-weight="fill">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <h2 class="text-[#141414] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Questions &amp; Answers</h2>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfcYxeNvup4wU6i2dFpNiJp86YCAveebfEbvfS_ojRq5z01128qOh3ylGKA3PYLtohtZdyrKOKRZbkN1UQ3vvTOpVh_5DHUZaiY4-1-7NZdMmxYjy60m5nVehdlfMojVd_vH-r_ORFTcqA-eFGH5-l8UkyOMwNTluK22Dutft0Rm77yXUNgf1v7qYpt9uBUi8quqCRwW2oo_gW59m_U8hArJ4PxFHfJu54WhtrN6lT3DpSfzOCC-ekyzgOZ9eDxasM-aaHZPlLrlM");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-[#141414] text-sm font-bold leading-normal tracking-[0.015em]">Ethan Carter</p>
+                  <p class="text-[#757575] text-sm font-normal leading-normal">2 weeks ago</p>
+                </div>
+                <p class="text-[#141414] text-sm font-normal leading-normal">Can someone explain the difference between a list and a tuple in Python?</p>
+              </div>
+            </div>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhvpJDeK188ZEaFXuQ-_ljVec6KRq4xhjhAQPeUD36-oIx2xYviNegpCt8N8k_PCQfKn6ZGfGC43SCSVQwzKeddl3qFumjs50SnMG9rHznOZxxWRmKPMZmPvSltOsE7zUItB5n3RlYqSx2AIvRxVb94qh0vdoRUKQkf46BDRTKyiGt-X-3lIlI8pN80GJOin9cfRlzUGQPg_B6NhEV-tTW3EfJnGfijq81DrCqVtpRxXCuJa3WXYHK_Rk3MYoLUMFCbpQdvgEeFqA");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-[#141414] text-sm font-bold leading-normal tracking-[0.015em]">Sophia Bennett</p>
+                  <p class="text-[#757575] text-sm font-normal leading-normal">1 week ago</p>
+                </div>
+                <p class="text-[#141414] text-sm font-normal leading-normal">I'm having trouble setting up my development environment. Any tips?</p>
+              </div>
+            </div>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvyi0C8os9qDKU_gRW79NO1jVisqCFLkQEEu1LD6vYawlrqkVSuklX8aouuwfh9kgEmxBVelmuwx4lZ0Ijh_P47TMev1aT20x0fHTH-1HMUvVA_ENm23fxR1EK5c0FRlCXqarhOISarW5vksn4-Ts2BEDpcJzK-qqlfPztwZHHm23O4J0uQw_rdLBJXOpZlWFv4YYE2oebJNpdGoP9J9zoWLdCckQg-N6j4uPfcLqMUE8-3HJNnRd66RQH7o_kg25_hs4koUD3Ud0");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-[#141414] text-sm font-bold leading-normal tracking-[0.015em]">Liam Harper</p>
+                  <p class="text-[#757575] text-sm font-normal leading-normal">3 days ago</p>
+                </div>
+                <p class="text-[#141414] text-sm font-normal leading-normal">Is there a recommended IDE for this course?</p>
+              </div>
+            </div>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAulUEG42ZFxyCn2995mM3OBiac2khHHZwQOMzAY95bL-yKkruaf8sHtW0YsqeGkov8uzvyM8ZY7_pBYD3AWxaV7yngk7IlL80a3An_1HK16ynCCU__rzK7c8CAXx44Wyg0CpPQF8Quy5D0TbF4dIr1aTXEwX3nQiOTDCVkuRdtrg25o0DMGi0s3S3X2o6Cxd7lEsDfNBkBt8Fs6wlJxrFnP7CoZHJt9OsSsGRvKjHHNoAxWZPZ4zgdNvMaY4gHZZhW-y1gjPlM4S0");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-[#141414] text-sm font-bold leading-normal tracking-[0.015em]">Olivia Reed</p>
+                  <p class="text-[#757575] text-sm font-normal leading-normal">1 day ago</p>
+                </div>
+                <p class="text-[#141414] text-sm font-normal leading-normal">I'm stuck on the debugging section. Can someone help?</p>
+              </div>
+            </div>
+          </div>
+          <div class="layout-content-container flex flex-col w-[360px]">
+            <h2 class="text-[#141414] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Course Content</h2>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+              <div class="text-[#141414] flex items-center justify-center rounded-lg bg-[#f2f2f2] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M164.44,105.34l-48-32A8,8,0,0,0,104,80v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,129.05V95l25.58,17ZM216,40H40A16,16,0,0,0,24,56V168a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,128H40V56H216V168Zm16,40a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16H224A8,8,0,0,1,232,208Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-[#141414] text-base font-medium leading-normal line-clamp-1">Introduction to the Course</p>
+                <p class="text-[#757575] text-sm font-normal leading-normal line-clamp-2">10 min</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+              <div class="text-[#141414] flex items-center justify-center rounded-lg bg-[#f2f2f2] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M164.44,105.34l-48-32A8,8,0,0,0,104,80v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,129.05V95l25.58,17ZM216,40H40A16,16,0,0,0,24,56V168a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,128H40V56H216V168Zm16,40a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16H224A8,8,0,0,1,232,208Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-[#141414] text-base font-medium leading-normal line-clamp-1">Setting Up Your Development Environment</p>
+                <p class="text-[#757575] text-sm font-normal leading-normal line-clamp-2">15 min</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+              <div class="text-[#141414] flex items-center justify-center rounded-lg bg-[#f2f2f2] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M164.44,105.34l-48-32A8,8,0,0,0,104,80v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,129.05V95l25.58,17ZM216,40H40A16,16,0,0,0,24,56V168a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,128H40V56H216V168Zm16,40a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16H224A8,8,0,0,1,232,208Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-[#141414] text-base font-medium leading-normal line-clamp-1">Understanding the Basics of Programming</p>
+                <p class="text-[#757575] text-sm font-normal leading-normal line-clamp-2">20 min</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+              <div class="text-[#141414] flex items-center justify-center rounded-lg bg-[#f2f2f2] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M164.44,105.34l-48-32A8,8,0,0,0,104,80v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,129.05V95l25.58,17ZM216,40H40A16,16,0,0,0,24,56V168a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,128H40V56H216V168Zm16,40a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16H224A8,8,0,0,1,232,208Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-[#141414] text-base font-medium leading-normal line-clamp-1">Working with Data Structures</p>
+                <p class="text-[#757575] text-sm font-normal leading-normal line-clamp-2">25 min</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+              <div class="text-[#141414] flex items-center justify-center rounded-lg bg-[#f2f2f2] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M164.44,105.34l-48-32A8,8,0,0,0,104,80v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,129.05V95l25.58,17ZM216,40H40A16,16,0,0,0,24,56V168a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,128H40V56H216V168Zm16,40a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16H224A8,8,0,0,1,232,208Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-[#141414] text-base font-medium leading-normal line-clamp-1">Implementing Algorithms</p>
+                <p class="text-[#757575] text-sm font-normal leading-normal line-clamp-2">30 min</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+              <div class="text-[#141414] flex items-center justify-center rounded-lg bg-[#f2f2f2] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M164.44,105.34l-48-32A8,8,0,0,0,104,80v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,129.05V95l25.58,17ZM216,40H40A16,16,0,0,0,24,56V168a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,128H40V56H216V168Zm16,40a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16H224A8,8,0,0,1,232,208Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-[#141414] text-base font-medium leading-normal line-clamp-1">Debugging and Testing Your Code</p>
+                <p class="text-[#757575] text-sm font-normal leading-normal line-clamp-2">35 min</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+              <div class="text-[#141414] flex items-center justify-center rounded-lg bg-[#f2f2f2] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M164.44,105.34l-48-32A8,8,0,0,0,104,80v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,129.05V95l25.58,17ZM216,40H40A16,16,0,0,0,24,56V168a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,128H40V56H216V168Zm16,40a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16H224A8,8,0,0,1,232,208Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-[#141414] text-base font-medium leading-normal line-clamp-1">Advanced Programming Concepts</p>
+                <p class="text-[#757575] text-sm font-normal leading-normal line-clamp-2">40 min</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+              <div class="text-[#141414] flex items-center justify-center rounded-lg bg-[#f2f2f2] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M164.44,105.34l-48-32A8,8,0,0,0,104,80v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,129.05V95l25.58,17ZM216,40H40A16,16,0,0,0,24,56V168a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,128H40V56H216V168Zm16,40a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16H224A8,8,0,0,1,232,208Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-[#141414] text-base font-medium leading-normal line-clamp-1">Building a Simple Application</p>
+                <p class="text-[#757575] text-sm font-normal leading-normal line-clamp-2">45 min</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+              <div class="text-[#141414] flex items-center justify-center rounded-lg bg-[#f2f2f2] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M164.44,105.34l-48-32A8,8,0,0,0,104,80v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,129.05V95l25.58,17ZM216,40H40A16,16,0,0,0,24,56V168a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,128H40V56H216V168Zm16,40a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16H224A8,8,0,0,1,232,208Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-[#141414] text-base font-medium leading-normal line-clamp-1">Deploying Your Application</p>
+                <p class="text-[#757575] text-sm font-normal leading-normal line-clamp-2">50 min</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+              <div class="text-[#141414] flex items-center justify-center rounded-lg bg-[#f2f2f2] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M164.44,105.34l-48-32A8,8,0,0,0,104,80v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,129.05V95l25.58,17ZM216,40H40A16,16,0,0,0,24,56V168a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,128H40V56H216V168Zm16,40a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16H224A8,8,0,0,1,232,208Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-[#141414] text-base font-medium leading-normal line-clamp-1">Course Conclusion and Next Steps</p>
+                <p class="text-[#757575] text-sm font-normal leading-normal line-clamp-2">55 min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
