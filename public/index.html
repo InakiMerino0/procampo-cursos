@@ -83,7 +83,7 @@
                 class="relative flex items-center justify-center bg-black bg-cover bg-center aspect-video rounded-lg p-4"
                 style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJGQcS3FvJvDKD7ZFHmlco1e70JWec7iFgFLqLWlS8EEYwbGGoWocBIlR0FrDJsYHeM3GZWTfu2rwl_C-Or_JLQYi3l1bV3Z23epwLXu8Zk5sjflFfF8ClsDYYgObv6EfenACKut9EyWvpOix0SRZQbVxSYAYb3Kcbr9iED6mRQpCiL-2GPg928RGO3zTBevB3bg7bgs9BF3dMTpNW3raP9FyURXLV56eNsP878Ue6dxaWGYubm-x0acqrA9PuoQTizPolAQ50MSE");'
               >
-                <button class="flex shrink-0 items-center justify-center rounded-full size-16 bg-black/40 text-white">
+                <a href="/video" class="flex shrink-0 items-center justify-center rounded-full size-16 bg-black/40 text-white">
                   <div class="text-inherit" data-icon="Play" data-size="24px" data-weight="fill">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                       <path
@@ -91,26 +91,27 @@
                       ></path>
                     </svg>
                   </div>
-                </button>
+                </a>
               </div>
             </div>
             <div class="pb-3">
-              <div class="flex border-b border-[#dbdbdb] px-4 gap-8">
-                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-black text-[#141414] pb-[13px] pt-4" href="#">
+                <div class="flex border-b border-[#dbdbdb] px-4 gap-8">
+                <a data-tab-target="overview" class="tab-link flex flex-col items-center justify-center border-b-[3px] border-b-black text-[#141414] pb-[13px] pt-4" href="#">
                   <p class="text-[#141414] text-sm font-bold leading-normal tracking-[0.015em]">Overview</p>
                 </a>
-                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-neutral-500 pb-[13px] pt-4" href="#">
+                <a data-tab-target="content" class="tab-link flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-neutral-500 pb-[13px] pt-4" href="#">
                   <p class="text-neutral-500 text-sm font-bold leading-normal tracking-[0.015em]">Content</p>
                 </a>
-                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-neutral-500 pb-[13px] pt-4" href="#">
+                <a data-tab-target="reviews" class="tab-link flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-neutral-500 pb-[13px] pt-4" href="#">
                   <p class="text-neutral-500 text-sm font-bold leading-normal tracking-[0.015em]">Reviews</p>
                 </a>
-                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-neutral-500 pb-[13px] pt-4" href="#">
+                <a data-tab-target="instructor" class="tab-link flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-neutral-500 pb-[13px] pt-4" href="#">
                   <p class="text-neutral-500 text-sm font-bold leading-normal tracking-[0.015em]">Instructor</p>
                 </a>
               </div>
             </div>
-            <p class="text-[#141414] text-base font-normal leading-normal pb-3 pt-1 px-4">
+              <div id="overview" class="tab-content opacity-100 transition-opacity duration-300">
+              <p class="text-[#141414] text-base font-normal leading-normal pb-3 pt-1 px-4">
               This comprehensive course will guide you through the fundamentals of data analysis using Python. Learn to manipulate, analyze, and visualize data effectively,
               preparing you for a career in data science.
             </p>
@@ -175,6 +176,16 @@
               </div>
               <p class="text-[#141414] text-base font-normal leading-normal flex-1 truncate">Certificate of completion</p>
             </div>
+              </div>
+            <div id="content" class="tab-content hidden opacity-0 transition-opacity duration-300 px-4 pb-3">
+              <p class="text-[#141414] text-base font-normal leading-normal">Detailed course curriculum will be shown here.</p>
+            </div>
+            <div id="reviews" class="tab-content hidden opacity-0 transition-opacity duration-300 px-4 pb-3">
+              <p class="text-[#141414] text-base font-normal leading-normal">See what other students are saying about this course.</p>
+            </div>
+            <div id="instructor" class="tab-content hidden opacity-0 transition-opacity duration-300 px-4 pb-3">
+              <p class="text-[#141414] text-base font-normal leading-normal">Information about your instructor will appear here.</p>
+            </div>
             <div class="flex px-4 py-3 justify-end">
               <button
                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-black text-neutral-50 text-base font-bold leading-normal tracking-[0.015em]"
@@ -185,6 +196,35 @@
           </div>
         </div>
       </div>
-    </div>
+  </div>
+  <script>
+    const links = document.querySelectorAll('.tab-link');
+    const tabs = document.querySelectorAll('.tab-content');
+
+    function showTab(id) {
+      tabs.forEach((tab) => {
+        if (tab.id === id) {
+          tab.classList.remove('hidden');
+          requestAnimationFrame(() => tab.classList.remove('opacity-0'));
+        } else {
+          tab.classList.add('opacity-0');
+          setTimeout(() => tab.classList.add('hidden'), 300);
+        }
+      });
+    }
+
+    links.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        links.forEach((l) => {
+          l.classList.remove('border-b-black', 'text-[#141414]');
+          l.classList.add('border-b-transparent', 'text-neutral-500');
+        });
+        link.classList.remove('border-b-transparent', 'text-neutral-500');
+        link.classList.add('border-b-black', 'text-[#141414]');
+        showTab(link.dataset.tabTarget);
+      });
+    });
+  </script>
   </body>
 </html>
