@@ -4,7 +4,8 @@ Este repositorio ha sido simplificado para utilizar una única aplicación Node.
 
 ## 📦 Estructura
 
-- `public/index.html` – Página principal del frontend. Utiliza Tailwind CSS cargado desde CDN.
+- `public/index.html` – Página principal del curso.
+- `public/video.html` – Vista donde el alumno reproduce las clases.
 - `server.js` – Servidor Express encargado de servir los archivos estáticos.
 - `package.json` – Dependencias y comandos de npm.
 
@@ -18,6 +19,6 @@ Este repositorio ha sido simplificado para utilizar una única aplicación Node.
    ```bash
    npm start
    ```
-3. Abre `http://localhost:3000` en tu navegador para ver la página.
+3. Abre `http://localhost:3000` para la página principal y `http://localhost:3000/video` para la vista de video.
 
 Este es el punto de partida para una infraestructura monolítica simple. Se puede ampliar con rutas adicionales, lógica de autenticación y conexión a bases de datos según las necesidades del proyecto.
