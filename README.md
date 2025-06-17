@@ -1,63 +1,93 @@
-# 📚 Plataforma de Cursos – MVP
+# Plataforma de Cursos - Monorepo
 
-Este proyecto es un desarrollo inicial de una plataforma de cursos online pensada para ofrecer contenidos en video de forma escalable, segura y con una experiencia profesional para los usuarios.
-
-El objetivo es resolver problemas comunes como la saturación de servicios como Google Drive y ofrecer una base sólida para seguir creciendo.
+Este proyecto consiste en una plataforma de cursos online con arquitectura fullstack. Está orientado a la simplicidad, reutilización y despliegue por instancia única. En esta primera versión, el enfoque es permitir un curso único por instalación, con funcionalidades básicas pero sólidas.
 
 ---
 
-## 🚧 Estado actual
+## 🧱 Estructura del Proyecto
 
-> MVP en desarrollo – Primera fase completada (configuración de entorno y estructura base)
-
----
-
-## 🧱 Estructura del proyecto
-
-```
-plataforma-cursos/
-├── frontend/   → Proyecto Next.js con TypeScript + Tailwind CSS
-└── backend/    → API REST con Spring Boot + MySQL
-```
+- **Monorepo**: contiene tanto el frontend como el backend en un único repositorio.
+- **Frontend**: HTML, CSS y JavaScript puro, sin frameworks, para evitar dependencias innecesarias.
+- **Backend**: Spring Boot en Java, conectado a una base de datos MySQL.
+- **Base de datos**: orientada a un curso único por proyecto, diseñada y administrada con MySQL Workbench.
 
 ---
 
-## 📌 Tecnologías utilizadas
+## 🚀 Stack Tecnológico
 
-### Frontend:
-- [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [TypeScript](https://www.typescriptlang.org/)
-
-### Backend:
-- [Spring Boot](https://spring.io/projects/spring-boot)
-- [Java 17+](https://openjdk.org/projects/jdk/17/)
-- [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
-- [MySQL](https://www.mysql.com/)
+| Capa         | Tecnología           |
+|--------------|----------------------|
+| Frontend     | HTML, CSS, JS        |
+| Backend      | Java + Spring Boot   |
+| Base de Datos| MySQL                |
+| Autenticación| Google OAuth 2.0     |
+| Infraestructura (dev) | Local + Live Server |
 
 ---
 
-## 🎯 Objetivos del MVP
+## 🔐 Autenticación
 
-- Autenticación de usuarios (Google + sistema propio)
-- Reproductor de cursos en video con acceso controlado
-- Gestión básica de contenido desde backend
-- Despliegue en infraestructura escalable (AWS)
-
----
-
-## 🗓️ Roadmap de desarrollo
-
-- [x] Configuración de entorno local (frontend + backend)
-- [ ] Autenticación funcional
-- [ ] Dashboard de cursos
-- [ ] Reproductor de video seguro (S3 + CloudFront)
-- [ ] Deploy completo y documentación
+- Se utiliza **Login con Google** como único método de autenticación.
+- Configuración mediante Google Developer Console (OAuth 2.0).
+- El sistema distingue entre:
+  - **Admin** (gestión general)
+  - **Estudiante** (progreso y consumo de contenido)
 
 ---
 
-## 🧑‍💻 Autor
+## 🧠 Estructura de Base de Datos
 
-Desarrollado por [Tu Nombre]  
-Contacto: [tu.email@example.com] / [WhatsApp o LinkedIn si querés agregarlo]
+**Diseñada para una sola instancia de curso.**
+
+Entidades principales:
+- `usuarios`: id, nombre, email, rol
+- `cursos`: id, nombre, descripción
+- `modulos`: id, curso_id, título
+- `videos`, `pdfs`, `examenes`: asociados a módulos
+- `inscripciones`: alumno_id, curso_id
+- `progreso_usuario`: usuario_id, modulo_id, estado
+
+---
+
+## 🎯 Alcance de la Fase Actual
+
+- Curso único por instancia del proyecto
+- Progreso del usuario por módulo
+- Reproductor de videos, visualización de PDFs, y sistema de evaluaciones
+- Login con Google (en implementación)
+- Maquetado completo de:
+  - Página de inicio
+  - Página del curso
+  - Página de login (mock)
+  - Página del reproductor
+
+---
+
+## 🧪 Estado Actual del Desarrollo
+
+- [x] Backend funcional con conexión MySQL
+- [x] Frontend maquetado con diseño minimalista moderno
+- [x] Estructura base del monorepo completa
+- [ ] Login con Google en integración
+- [ ] Conexión frontend-backend pendiente
+- [ ] Implementación de lógica de carga de contenido
+
+---
+
+## 🛠️ Modelo de Negocio
+
+- Se vende la plataforma como **plantilla reutilizable** por proyecto
+- Cada instancia es completamente independiente
+- Pensada para ser fácilmente desplegable en múltiples clientes
+
+---
+
+## ✨ Próximos pasos
+
+- Finalizar integración OAuth
+- Conectar backend con frontend
+- Implementar dashboard de usuario y lógica de consumo de contenidos
+- Documentación técnica detallada para facilitar reusabilidad
+
+---
+
